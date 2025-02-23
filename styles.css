@@ -7,12 +7,12 @@ modify {
 }
 
 header {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+background: rgba(0, 0, 0, 0.7);
+padding: 20px;
+text-align: center;
+position: sticky;
+top: 0;
+z-index: 1000;
 }
 
 nav ul {
