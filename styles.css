@@ -15,10 +15,10 @@ header {
     z-index: 1000;
 }
 header h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-  animation: fadeInDown 1s ease-in-out;
-
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-in-out;
+}
 nav ul {
     list-style: none;
     padding: 0;
