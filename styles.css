@@ -139,7 +139,7 @@ section {
     gap: 20px;
 }
 
-#about, #projects, #contact {
+#about, #contact {
     background-color: white;
     padding: 50px;
     margin: 20px auto;
