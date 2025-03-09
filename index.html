@@ -19,6 +19,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+      <button id="toggle-theme">Toggle Dark Mode</button>
     </header>
 
     <section id="about">
@@ -55,20 +56,36 @@
             <i class="fab fa-linux"></i>
         </div>
     </section>
+        <section id="contact">
+    <h2>Contact</h2>
+    <p>Let's connect! Reach out via:</p>
+    
+    <div class="contact-icons">
+        <a href="https://www.linkedin.com/in/ofentse-mofokeng-345269350" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:ofentsemofokeng204@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/OfentseMofokeng204" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Let's connect! Reach out via:</p>
-        <div class="contact-icons">
-            <a href="https://www.linkedin.com/in/ofentse-mofokeng-345269350" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto: @ofentsemofokeng204.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://github.com/OfentseMofokeng204" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
-    </section>
+    <!-- Add Contact Form -->
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+   
 
     <footer>
         <p>Made with ❤️ in South Africa</p>
-    </footer>>
+    </footer>
  <script src="script.js"></script>
 </body>
 </html>
