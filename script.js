@@ -62,9 +62,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Dark Mode Toggle
-  const toggleButton = document.getElementById('toggle-theme');
-  toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
+  const button = document.getElementById('dark-mode-toggle');
+  button.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+  });
+
   });
 
   // Dynamic Date/Time
