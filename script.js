@@ -127,6 +127,4 @@ toggle.addEventListener("click", function() {
     localStorage.setItem("darkMode", body.classList.contains("dark-mode") ? "enabled" : "disabled");
 });
 
-// animatypeText(); // Start the typing animation
-
-});
+typeText(); // Start the typing animation
