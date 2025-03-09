@@ -1,20 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contact-form');
+  const form = document.getElementById('contact-form');
 
-    form.addEventListener('submit', function(event) {
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
+  form.addEventListener('submit', function(event) {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
 
-        if (name === '' || email === '' || message === '') {
-            alert('Please fill in all fields.');
-            event.preventDefault(); // Stops form submission
-        } else if (!email.includes('@')) {
-            alert('Please enter a valid email address.');
-            event.preventDefault();
-        } else {
-            alert('Message sent successfully!');
-        }
+    if (name === '' || email === '' || message === '') {
+      alert('Please fill in all fields.');
+      event.preventDefault(); // Stops form submission
+    } else if (!email.includes('@')) {
+      alert('Please enter a valid email address.');
+      event.preventDefault();
+    } else {
+      alert('Message sent successfully!');
+    }
+  });
 
   // Smooth scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -43,15 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Form Validation
-  form.addEventListener('submit', function(e) {
-    const email = document.getElementById('email');
-    if (!email.value.includes('@')) {
-      alert('Please enter a valid email address.');
-      e.preventDefault();
-    }
-  });
-
   // Scroll Animations (using AOS)
   AOS.init({
     offset: 200,  
@@ -59,11 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Dark Mode Toggle
-  const button = document.getElementById('dark-mode-toggle');
+  document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
   button.addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-  });
-
+    document.body.classList.toggle('dark-mode');
   });
 });
 
@@ -110,3 +101,4 @@ function typeText() {
 }
 
 typeText(); // Start the typing animation
+});
