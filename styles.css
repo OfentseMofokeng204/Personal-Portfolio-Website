@@ -96,3 +96,15 @@ footer {
     background: #f4f4f4;
     margin-top: 30px;
 }
+  @media (max-width: 768px) {
+    /* Styles for tablets and smaller devices */
+  }
+  @media (max-width: 480px) {
+    /* Styles for mobile devices */
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
