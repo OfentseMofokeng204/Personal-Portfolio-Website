@@ -1,10 +1,22 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
 
-  // Navigation Menu
-  const menuButton = document.getElementById('menu-button');
-  const navMenu = document.getElementById('nav-menu');
-  const closeButton = document.getElementById('close-button');
-  const navLinks = document.querySelectorAll('.nav-link');
+    form.addEventListener('submit', function(event) {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (name === '' || email === '' || message === '') {
+            alert('Please fill in all fields.');
+            event.preventDefault(); // Stops form submission
+        } else if (!email.includes('@')) {
+            alert('Please enter a valid email address.');
+            event.preventDefault();
+        } else {
+            alert('Message sent successfully!');
+        }
+    });
+});
 
   // Smooth scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
