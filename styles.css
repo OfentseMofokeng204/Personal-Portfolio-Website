@@ -23,6 +23,10 @@ nav a {
     text-decoration: none;
     color: black;
 }
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
 
 .container {
     display: flex;
@@ -106,5 +110,6 @@ footer {
     max-width: 100%;
     height: auto;
   }
+
 
 
