@@ -108,6 +108,24 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(typeText, 100);
     }
   }
+document.getElementById("dark-mode-toggle").addEventListener("click", function() {
+    console.log("Dark mode button clicked");
+});
+document.getElementById("dark-mode-toggle").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+});
+const toggle = document.getElementById("dark-mode-toggle");
+const body = document.body;
+
+// Check localStorage
+if (localStorage.getItem("darkMode") === "enabled") {
+    body.classList.add("dark-mode");
+}
+
+toggle.addEventListener("click", function() {
+    body.classList.toggle("dark-mode");
+    localStorage.setItem("darkMode", body.classList.contains("dark-mode") ? "enabled" : "disabled");
+});
 
 // animatypeText(); // Start the typing animation
 
