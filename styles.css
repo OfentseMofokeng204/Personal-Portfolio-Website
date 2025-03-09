@@ -13,46 +13,6 @@ header {
     background: #f4f4f4;
 }
 
-<<<<<<< HEAD
-.navbar a {
-    color: var(--text-color);
-    text-decoration: none;
-    padding: 10px 20px;
-    transition: 0.3s;
-}
-
-.navbar a:hover {
-    color: var(--accent-color);
-}
-#theme-toggle {
-    background: var(--accent-color);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 5px;
-}
-
-#theme-toggle:hover {
-    background: #ff8787;
-}
-
-header h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-    animation: fadeInDown 1s ease-in-out;
-}
-h1, h2 {
-    font-size: 3em;
-    text-transform: uppercase;
-    background: linear-gradient(45deg, #ff6b6b, #ffcc00);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: fadeIn 2s ease-in-out;
-}
-=======
->>>>>>> dbcd6004634985d31a00c5d9ade14e091dc2ec36
 nav ul {
     list-style: none;
     display: flex;
@@ -91,4 +51,3 @@ footer {
     background: #f4f4f4;
     margin-top: 30px;
 }
-
