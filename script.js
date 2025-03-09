@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             alert('Message sent successfully!');
         }
-    });
-});
 
   // Smooth scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -46,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Form Validation
-  const form = document.getElementById('contact-form');
   form.addEventListener('submit', function(e) {
     const email = document.getElementById('email');
     if (!email.value.includes('@')) {
@@ -68,65 +65,48 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   });
+});
 
-  // Dynamic Date/Time
-  const dateElement = document.getElementById('current-date');
-  const currentDate = new Date();
-  dateElement.textContent = currentDate.toLocaleDateString();
+// Dynamic Date/Time
+const dateElement = document.getElementById('current-date');
+const currentDate = new Date();
+dateElement.textContent = currentDate.toLocaleDateString();
 
-  // Image Slideshow/Carousel
-  let currentIndex = 0;
-  const images = document.querySelectorAll('.carousel-image');
+// Image Slideshow/Carousel
+let currentIndex = 0;
+const images = document.querySelectorAll('.carousel-image');
 
-  function showImage(index) {
-    images.forEach((img, i) => {
-      img.style.display = i === index ? 'block' : 'none';
-    });
-  }
-
-  function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
-  }
-
-  setInterval(nextImage, 3000); // Change image every 3 seconds
-
-  // Progress Bar for Page Load
-  window.addEventListener('load', () => {
-    const progressBar = document.getElementById('progress-bar');
-    progressBar.style.width = '100%';
-    setTimeout(() => progressBar.style.display = 'none', 500);
+function showImage(index) {
+  images.forEach((img, i) => {
+    img.style.display = i === index ? 'block' : 'none';
   });
-
-  // Typing Animation (for introduction)
-  const textElement = document.getElementById('intro-text');
-  const textToType = 'Welcome to my Portfolio!';
-  let index = 0;
-
-  function typeText() {
-    if (index < textToType.length) {
-      textElement.textContent += textToType.charAt(index);
-      index++;
-      setTimeout(typeText, 100);
-    }
-  }
-document.getElementById("dark-mode-toggle").addEventListener("click", function() {
-    console.log("Dark mode button clicked");
-});
-document.getElementById("dark-mode-toggle").addEventListener("click", function() {
-    document.body.classList.toggle("dark-mode");
-});
-const toggle = document.getElementById("dark-mode-toggle");
-const body = document.body;
-
-// Check localStorage
-if (localStorage.getItem("darkMode") === "enabled") {
-    body.classList.add("dark-mode");
 }
 
-toggle.addEventListener("click", function() {
-    body.classList.toggle("dark-mode");
-    localStorage.setItem("darkMode", body.classList.contains("dark-mode") ? "enabled" : "disabled");
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  showImage(currentIndex);
+}
+
+setInterval(nextImage, 3000); // Change image every 3 seconds
+
+// Progress Bar for Page Load
+window.addEventListener('load', () => {
+  const progressBar = document.getElementById('progress-bar');
+  progressBar.style.width = '100%';
+  setTimeout(() => progressBar.style.display = 'none', 500);
 });
+
+// Typing Animation (for introduction)
+const textElement = document.getElementById('intro-text');
+const textToType = 'Welcome to my Portfolio!';
+let index = 0;
+
+function typeText() {
+  if (index < textToType.length) {
+    textElement.textContent += textToType.charAt(index);
+    index++;
+    setTimeout(typeText, 100);
+  }
+}
 
 typeText(); // Start the typing animation
