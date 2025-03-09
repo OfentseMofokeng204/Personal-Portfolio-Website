@@ -76,6 +76,7 @@ h1, h2 {
     font-size: 3em;
     text-transform: uppercase;
     background: linear-gradient(45deg, #ff6b6b, #ffcc00);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: fadeIn 2s ease-in-out;
