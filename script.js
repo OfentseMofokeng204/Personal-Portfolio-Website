@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('contact-form');
 
+  AOS.init();
+
+
   form.addEventListener('submit', function(event) {
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
